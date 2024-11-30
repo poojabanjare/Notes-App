@@ -1,0 +1,42 @@
+*<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note App with Search and Text Formatting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Note-Making App</h1>
+      <button id="toggle-theme">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input id="search-input" type="text" placeholder="Search notes by title or content">
+      <button id="search-btn">🔍 Search</button>
+    </div>
+
+    <!-- Note Input Section -->
+    <div class="note-form">
+      <button id="back-to-notes" style="display: none;">🔙 Back to All Notes</button>
+      <div class="toolbar">
+        <button id="bold-btn"><b>B</b></button>
+        <button id="italic-btn"><i>I</i></button>
+        <button id="underline-btn"><u>U</u></button>
+      </div>
+      <div id="note-title" contenteditable="true" class="editable" placeholder="Enter Title..."></div>
+      <div id="note-content" contenteditable="true" class="editable" placeholder="Enter your note..."></div>
+      <input type="color" id="note-color" value="#f1c40f" /> Add Color On Your Note
+      <button id="add-note" class="add-btn">Add Note</button>
+      <button id="delete-all-notes" class="danger-btn">Delete All Notes</button>
+    </div>
+
+    <!-- Notes Container -->
+    <div id="notes-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>*

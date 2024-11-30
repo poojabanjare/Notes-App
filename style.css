@@ -1,0 +1,315 @@
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--note-border);
+  border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+#search-btn:hover {
+  background-color: #005bb5;
+  /* Lighter Blue */
+}
+
+/* Add Button Styling */
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #1e8449;
+  transform: translateY(-2px);
+}
+
+/* :root {
+  --bg-color: #f8f9fa;
+  --text-color: #343a40;
+  --button-bg: #007bff;
+  --note-bg: #ffffff;
+  --note-border: #dee2e6;
+} */
+
+:root {
+  --primary-color: #1abc9c; /* Teal Green */
+  --secondary-color: #34495e; /* Dark Blue-Gray */
+  --accent-color: #f39c12; /* Amber Orange */
+  --light-bg: #ecf0f1; /* Light Gray */
+  --dark-bg: #2c3e50; /* Deep Blue-Gray */
+  --text-light: #2c3e50; /* Text for Light Mode */
+  --text-dark: #ecf0f1; /* Text for Dark Mode */
+  --note-light: #f5f5f5; /* Note Background for Light Mode */
+  --note-dark: #7f8c8d; /* Note Background for Dark Mode */
+}
+:root {
+  --primary-color: #1abc9c; /* Teal Green */
+  --secondary-color: #34495e; /* Dark Blue-Gray */
+  --accent-color: #f39c12; /* Amber Orange */
+  --light-bg: #ecf0f1; /* Light Gray */
+  --dark-bg: #2c3e50; /* Deep Blue-Gray */
+  --text-light: #2c3e50; /* Text for Light Mode */
+  --text-dark: #ecf0f1; /* Text for Dark Mode */
+  --note-light: #f5f5f5; /* Note Background for Light Mode */
+  --note-dark: #7f8c8d; /* Note Background for Dark Mode */
+}
+
+/* Light Mode Styles */
+body {
+  background-color: var(--light-bg);
+  color: var(--text-light);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.add-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.edit-btn {
+  background-color: #3498db; /* Bright Sky Blue */
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Bright Red */
+  color: white;
+}
+
+.note {
+  background: linear-gradient(to bottom, var(--note-light), var(--note-dark));
+  color: var(--text-light);
+  border: 1px solid var(--secondary-color);
+}
+
+.note:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  background-color: white;
+  color: var(--text-light);
+}
+
+.search-bar button {
+  background-color: #3498db;
+  color: white;
+}
+
+.toolbar button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #1c1c1c;
+  --text-color: #e9ecef;
+  --button-bg: #17a2b8;
+  --note-bg: #343a40;
+  --note-border: #495057;
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--note-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* background-color:rgb(192, 154, 228) ; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* Editable Fields */
+.editable {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--note-border);
+  border-radius: 5px;
+  min-height: 50px;
+  max-height: 150px;
+  overflow-y: auto;
+  resize: none;
+  margin: 10px -10px;
+  color: #1e88e5;
+}
+
+.editable:focus {
+  outline: 2px solid var(--button-bg);
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Notes Section */
+#notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.note {
+  background-color: var(--note-bg);
+  border: 1px solid var(--note-border);
+  padding: 10px;
+  border-radius: 10px;
+  width: 45%;
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.note:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.note p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+/* Note Actions */
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* .edit-btn, .delete-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+} */
+
+.edit-btn {
+  background-color: #3498db;
+  /* Sky Blue */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #2e86c1;
+  /* Deeper Blue */
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  /* Bright Crimson */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  /* Darker Crimson */
+}
+
+#toggle-theme {
+  background-color: var(--button-bg); /* Switches with theme */
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dark-mode #toggle-theme {
+  background-color: #8e44ad; /* Rich Purple for Dark Mode */
+}
+
+/* Delete All Notes Button */
+.danger-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.danger-btn:hover {
+  background-color: #e60000;
+}
